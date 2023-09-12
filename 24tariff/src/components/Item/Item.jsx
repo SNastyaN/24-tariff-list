@@ -1,12 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 import st from './style.module.scss'
 function Item(props) {
+    const [pressed,setPressed]=useState(false);
+    const handleChange = () => {
+        setPressed(!pressed);
+    }
     return (
-        <div className={st[props.color]}>
-            <h1>{props.name}</h1>
-            <p>{props.tarif}</p>
-            <p>{props.speed}</p>
-            <p>{props.footer}</p>
+        <div className={st[props.item.color]} onClick={handleChange}>
+        
+            <h1>{props.item.name}</h1>
+            <p>{props.item.tarif}</p>
+            <p>{props.item.speed}</p>
+            <p>{props.item.footer}</p>
+            
         </div>)
 }
 

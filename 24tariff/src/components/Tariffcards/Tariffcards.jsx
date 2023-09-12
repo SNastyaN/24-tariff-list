@@ -1,7 +1,8 @@
 import st from './style.module.scss'
 import Item from '../Item/Item';
+
 function Tariffcard(props){
-    console.log(props);
+    
     return (
         <div className={st.card}>
             {
